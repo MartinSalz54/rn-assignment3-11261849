@@ -38,7 +38,7 @@ const categories = [
     { id: '9', name: 'Gaming', category: 'Gaming' },
     { id: '10', name: 'Socializing', category: 'Socializing' },
     { id: '11', name: 'Hide', category: 'Hide' },
-    { id: '12', name: 'News', category: 'NEWS' },
+    { id: '12', name: 'NEWS', category: 'NEWS' },
   ];
   
   const HomeScreen = () => {
