@@ -1,3 +1,8 @@
+
+
+
+
+
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, FlatList, Image, TextInput, TouchableOpacity } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
@@ -5,33 +10,30 @@ import TaskList from '../../TaskList';
 
 // Mock data for categories and tasks
 const categories = [
-  { id: '1', name: 'Exercise', description: '', image: require('../../assets/young woman working at desk (1).png') },
-  { id: '2', name: 'Study', description: '', image: require('../../assets/young woman working online.png') },
+  { id: '1', name: 'Exercise', description: '', image: require('../../assets/young woman working online.png') },
+  { id: '2', name: 'Study', description: '', image: require('../../assets/young woman working at desk (1).png') },
   { id: '3', name: 'Code', description: '', image: require('../../assets/Profile Image.png') },
   { id: '4', name: 'Cook', description: '', image: require('../../assets/young woman working at desk (1).png') },
   { id: '5', name: 'Read', description: '', image: require('../../assets/young woman working at desk (1).png') },
   { id: '6', name: 'Travel', description: '', image: require('../../assets/young woman working at desk (1).png') },
-  { id: '7', name: 'Meditate', description: '', image: require('../../assets/young woman working at desk (1).png') },
+  { id: '7', name: 'S', description: '', image: require('../../assets/young woman working at desk (1).png') },
   { id: '8', name: 'Workout', description: '', image: require('../../assets/young woman working at desk (1).png') },
   // Add more categories here if needed
 ];
 
 const tasks = [
-  { id: '1', name: 'Task 1', category: 'Exercise' },
-  { id: '2', name: 'Task 2', category: 'Study' },
-  { id: '3', name: 'Task 3', category: 'Code' },
-  { id: '4', name: 'Task 4', category: 'Cook' },
-  { id: '5', name: 'Task 5', category: 'Read' },
-  { id: '6', name: 'Task 6', category: 'Travel' },
-  { id: '7', name: 'Task 7', category: 'Meditate' },
-  { id: '8', name: 'Task 8', category: 'Workout' },
-  { id: '9', name: 'Task 9', category: 'Exercise' },
-  { id: '10', name: 'Task 10', category: 'Study' },
-  { id: '11', name: 'Task 11', category: 'Code' },
-  { id: '12', name: 'Task 12', category: 'Cook' },
-  { id: '13', name: 'Task 13', category: 'Read' },
-  { id: '14', name: 'Task 14', category: 'Travel' },
-  { id: '15', name: 'Task 15', category: 'Meditate' },
+  { id: '1', name: 'Mobile App Development', category: 'Exercise' },
+  { id: '2', name: 'Web Developmet', category: 'Study' },
+  { id: '3', name: 'Push Ups', category: 'Code' },
+  { id: '4', name: 'Cook', category: 'Cook' },
+  { id: '5', name: 'Read', category: 'Music' },
+  { id: '6', name: 'Travel', category: 'Connect Here' },
+  { id: '7', name: 'Meditate', category: 'Art' },
+  { id: '8', name: 'Task 8', category: 'PhotoGraphy' },
+  { id: '9', name: 'Task 9', category: 'Gaming' },
+  { id: '10', name: 'Task 10', category: 'Socializing' },
+  { id: '11', name: 'Task 11', category: 'Hide' },
+  { id: '12', name: 'Task 12', category: 'NEWS' },
 ];
 
 const HomeScreen = () => {
@@ -76,20 +78,21 @@ const HomeScreen = () => {
       <View style={{ marginTop: 50, marginLeft: 20 }}>
         <Text style={{ fontSize: 25, fontWeight: "600", marginLeft: 10 }}>Categories</Text>
         <FlatList
-          data={categories}
-          renderItem={({ item }) => (
-            <View style={styles.categoriesItem}>
-              <View>
-                <Text style={styles.categoryTitle}>{item.name}</Text>
-                <Text>{item.description}</Text>
-              </View>
-              <Image source={item.image} style={styles.categoryImage} />
-            </View>
-          )}
-          keyExtractor={(item) => item.id}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-        />
+  data={categories}
+  renderItem={({ item }) => (
+    <View style={styles.categoriesItem}>
+      <View style={styles.categoryInfo}>
+        <Text style={styles.categoryTitle}>{item.name}</Text>
+        <Text style={styles.subText}>12 tasks</Text>
+      </View>
+      <Image source={item.image} style={styles.categoryImage} />
+    </View>
+  )}
+  keyExtractor={(item) => item.id}
+  horizontal
+  showsHorizontalScrollIndicator={false}
+/>
+
       </View>
 
       {/* Ongoing Tasks */}
@@ -155,7 +158,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   categoriesItem: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
     marginRight: 16,
   },
@@ -180,3 +183,4 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
+
