@@ -28,17 +28,17 @@ const categories = [
   
   const tasks = [
     { id: '1', name: 'Mobile App Development', category: 'Exercise' },
-    { id: '2', name: 'Web Developmet', category: 'Study' },
+    { id: '2', name: 'Web Developmet', category: 'S' },
     { id: '3', name: 'Push Ups', category: 'Code' },
     { id: '4', name: 'Cook', category: 'Cook' },
     { id: '5', name: 'Read', category: 'Music' },
     { id: '6', name: 'Travel', category: 'Connect Here' },
     { id: '7', name: 'Meditate', category: 'Art' },
-    { id: '8', name: 'Task 8', category: 'PhotoGraphy' },
-    { id: '9', name: 'Task 9', category: 'Gaming' },
-    { id: '10', name: 'Task 10', category: 'Socializing' },
-    { id: '11', name: 'Task 11', category: 'Hide' },
-    { id: '12', name: 'Task 12', category: 'NEWS' },
+    { id: '8', name: 'Photography', category: 'PhotoGraphy' },
+    { id: '9', name: 'Gaming', category: 'Gaming' },
+    { id: '10', name: 'Socializing', category: 'Socializing' },
+    { id: '11', name: 'Hide', category: 'Hide' },
+    { id: '12', name: 'News', category: 'NEWS' },
   ];
   
   const HomeScreen = () => {
