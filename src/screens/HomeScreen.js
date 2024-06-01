@@ -28,7 +28,7 @@ const categories = [
   
   const tasks = [
     { id: '1', name: 'Mobile App Development', category: 'Exercise' },
-    { id: '2', name: 'Web Developmet', category: 'S' },
+    { id: '2', name: 'Web Developmet', category: 'Web Development' },
     { id: '3', name: 'Push Ups', category: 'Code' },
     { id: '4', name: 'Cook', category: 'Cook' },
     { id: '5', name: 'Read', category: 'Music' },
